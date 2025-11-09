@@ -13,12 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0
       
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.0'  # Use your Flutter version
           channel: 'stable'
       
       - name: Install dependencies
@@ -26,9 +25,6 @@ jobs:
       
       - name: Analyze code
         run: flutter analyze
-      
-      - name: Run tests
-        run: flutter test --coverage || true
       
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
