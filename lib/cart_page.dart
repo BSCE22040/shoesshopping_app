@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app_flutter/cart_provider.dart';
-
+//DOING EDIT FOR SONARQUBE UPDATION OF CODE LINES
 /// CartPage displays all items added to the shopping cart
 /// 
 /// This page shows a list of products that the user has added to their cart.
